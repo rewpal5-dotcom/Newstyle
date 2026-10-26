@@ -1,60 +1,49 @@
-# ✨ Newstyle
+# Newstyle — Name Style Generator
 
-**Name style generator — apna naam likhein, 40 styles mein dekhein, PNG download karein ya shareable link copy karein.**
+**68 styles · live preview · PNG download · share link · favorites · settings · analytics**
 
-Live site: **https://rewpal5-dotcom.github.io/Newstyle/**
+Live: **https://rewpal5-dotcom.github.io/Newstyle-Web/**
 
-Ek single-file static web app. Koi build step nahi, koi dependency nahi, koi backend nahi — sab kuch browser mein chalta hai.
+## Pages
 
-## Features
+App paanch page ka hai, upar ke tabs se switch hota hai (URL hash routing):
 
-- **40 styles**, 10 categories mein — Neon, 3D, Metallic, Outline, Glow, Retro, Minimal, Gaming, Nature, Fun
-- Live preview — naam type karte hi har card aur bada preview update
-- Search aur category filter
-- 🎲 Random style button
-- **PNG download** (1600×600, WhatsApp DP / thumbnail / banner ke liye)
-- **Shareable link** — `?name=Rahul&style=gold-foil` jaisa URL, jise koi bhi khol sakta hai
-- WhatsApp share button
-- Poora responsive, mobile-first
+| Page | Kya karta hai |
+| --- | --- |
+| **Home** | Naam input, bada live preview, PNG download, link copy, favorite, WhatsApp share, popular styles |
+| **Styles** | Saare 68 styles, search, 15 category filters, card click se apply, heart se favorite |
+| **Favorites** | Save kiye hue styles, yahin se hataye ja sakte hain |
+| **Settings** | Default naam, preview size, PNG size (banner/DP/story), background, data reset |
+| **Analytics** | Local stats — kitne previews, downloads, link copies, shares, aur top 6 styles |
 
-## Styles kaise kaam karte hain
+## Styles
 
-Har style ek hi config se do jagah render hota hai — screen par CSS se, aur download ke waqt `<canvas>` par:
+68 styles, 15 categories: Neon, 3D, Metallic, Outline, Glow, Retro, Minimal, Gaming, Nature, Fun, Texture, Cyber, Dark, Badge, Pro.
+
+Har style ek config object se banta hai aur do jagah render hota hai — screen par CSS se, aur download ke waqt `<canvas>` par:
 
 ```js
 S("gold-foil", "Gold Foil", "Metallic", {
   fill: ["#fff8cc", "#b8860b"],   // gradient stops
   angle: 110,
   glow: { c: "#ffd75e", blur: 16 },
-  stroke: null,
-  shadow: null,
-  hollow: false
+  stroke: null, shadow: null, hollow: false
 })
 ```
 
-- `fill` — gradient ke do rang (gradient text `background-clip: text` se banta hai)
-- `stroke` — text outline
-- `glow` — neon jaisa glow (multiple text-shadows / canvas shadowBlur)
-- `shadow` — hard 3D shadow
-- `hollow` — sirf outline, andar khaali
-- `bg` — us style ka stage background
+Gradient wale styles par `text-shadow` ki jagah `drop-shadow` filter use hota hai — warna shadow transparent glyphs ke through dikh jaata hai.
 
-Naya style add karne ke liye `STYLES` array mein ek entry daal dein — grid, preview, PNG export sab apne aap update ho jayenge.
+## Data
 
-## Local run
+Sab kuch `localStorage` mein: `newstyle.settings`, `newstyle.favorites`, `newstyle.stats`. Koi backend nahi, koi account nahi, koi data bahar nahi jaata.
 
-```bash
-git clone https://github.com/rewpal5-dotcom/Newstyle.git
-cd Newstyle
-python3 -m http.server 8080
-# open http://localhost:8080
-```
+## Share link
 
-`index.html` ko seedha browser mein bhi khol sakte hain.
+`?name=Rahul&style=gold-foil` — link kholne par wahi naam aur style load ho jaate hain.
 
 ## Tech
 
-Vanilla HTML + CSS + JavaScript. Fonts system ke hain, koi external request nahi — page offline bhi chalta hai.
+Single file, vanilla HTML + CSS + JS. Koi dependency, koi external font, koi build step nahi.
 
 ## License
 
