@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newstyle — Name Style Generator</title>
+<meta name="description" content="Apna naam likhein aur 40 styles mein dekhein — neon, 3D, gold, outline, gaming aur bahut kuch. PNG download karein ya shareable link copy karein.">
+<meta name="theme-color" content="#07090f">
+<meta property="og:title" content="Newstyle — Name Style Generator">
+<meta property="og:description" content="40 styles. Ek naam. Turant PNG download aur shareable link.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<style>
+  :root{
+    --bg:#07090f;
+    --bg-2:#0c1119;
+    --card:#111827;
+    --card-2:#0f1522;
+    --line:#1e2937;
+    --ink:#e8eefc;
+    --muted:#8fa0b8;
+    --cyan:#22d3ee;
+    --pink:#f472b6;
+    --lime:#a3e635;
+    --violet:#a78bfa;
+    --r:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:
+      radial-gradient(900px 500px at 15% -10%,rgba(34,211,238,.16),transparent 62%),
+      radial-gradient(800px 520px at 88% 0%,rgba(244,114,182,.14),transparent 60%),
+      linear-gradient(180deg,#07090f,#05070b 60%);
+    background-attachment:fixed;
+    color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;
+  }
+  .wrap{width:min(1140px,92vw);margin-inline:auto}
+  a{color:var(--cyan)}
+  button{font-family:inherit}
+
+  /* header */
+  header{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px) saturate(140%);
+    background:rgba(7,9,15,.72);border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav{display:flex;align-items:center;gap:14px;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:800;letter-spacing:-.4px;font-size:1.08rem}
+  .logo .mark{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-size:1rem;
+    background:linear-gradient(140deg,#22d3ee,#a78bfa 55%,#f472b6);color:#06080d;font-weight:900;
+    box-shadow:0 6px 20px rgba(34,211,238,.28)}
+  .nav .spacer{margin-left:auto}
+  .nav .ghost{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600;padding:8px 12px;border-radius:10px}
+  .nav .ghost:hover{color:#fff;background:rgba(255,255,255,.06)}
+  @media(max-width:640px){.nav .ghost.hide-sm{display:none}}
+
+  /* hero */
+  .hero{padding:44px 0 8px;text-align:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:800;letter-spacing:.14em;
+    text-transform:uppercase;color:#9fe9f5;background:rgba(34,211,238,.10);border:1px solid rgba(34,211,238,.28);
+    padding:7px 14px;border-radius:999px}
+  h1{font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.08;letter-spacing:-1.4px;margin:18px 0 10px;font-weight:850;color:#fff}
+  h1 em{font-style:normal;background:linear-gradient(100deg,#22d3ee,#a78bfa 50%,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);max-width:56ch;margin:0 auto;font-size:1rem}
+
+  /* input */
+  .inputbar{display:flex;gap:10px;max-width:640px;margin:26px auto 0;flex-wrap:wrap;justify-content:center}
+  .field{flex:1 1 300px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:4px 6px 4px 14px;transition:border-color .16s ease,box-shadow .16s ease}
+  .field:focus-within{border-color:rgba(34,211,238,.55);box-shadow:0 0 0 4px rgba(34,211,238,.10)}
+  .field span{color:#5f7d94;font-size:1rem}
+  .field input{flex:1;background:transparent;border:0;outline:0;color:#fff;font-size:1rem;padding:12px 0;min-width:0}
+  .field input::placeholder{color:#5a6b7f}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;
+    font-weight:750;font-size:.93rem;padding:13px 20px;border-radius:14px;transition:transform .14s ease,box-shadow .14s ease,background .14s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:linear-gradient(135deg,#22d3ee,#a78bfa);color:#06080d;box-shadow:0 10px 26px rgba(34,211,238,.22)}
+  .btn-primary:hover{box-shadow:0 14px 32px rgba(34,211,238,.32)}
+  .btn-soft{background:rgba(255,255,255,.06);color:#dbe7f5;border:1px solid rgba(255,255,255,.12)}
+  .btn-soft:hover{background:rgba(255,255,255,.10)}
+
+  /* stage */
+  .stage-wrap{margin:30px auto 0;max-width:1000px}
+  .stage{position:relative;border-radius:26px;border:1px solid rgba(255,255,255,.10);overflow:hidden;
+    display:grid;place-items:center;min-height:260px;padding:40px 26px;
+    background:radial-gradient(700px 300px at 50% 0%,rgba(255,255,255,.05),transparent 70%),#0a0f18;
+    box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06)}
+  .stage .name{font-size:clamp(2rem,7vw,4.6rem);line-height:1.15;text-align:center;word-break:break-word;
+    max-width:100%;transition:color .2s ease}
+  .stage .meta{position:absolute;left:16px;bottom:14px;font-size:.74rem;color:#64798f;letter-spacing:.04em;text-transform:uppercase;font-weight:700}
+  .stage .badge{position:absolute;right:14px;top:14px;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+    color:#9fe9f5;background:rgba(34,211,238,.10);border:1px solid rgba(34,211,238,.26);padding:5px 10px;border-radius:999px}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+
+  /* toolbar */
+  .toolbar{margin:38px auto 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+  .search{display:flex;align-items:center;gap:9px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;padding:9px 13px;min-width:240px}
+  .search input{background:transparent;border:0;outline:0;color:#fff;font-size:.9rem;width:100%}
+  .search input::placeholder{color:#5a6b7f}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{cursor:pointer;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#b9c8da;
+    font-size:.82rem;font-weight:650;padding:8px 13px;border-radius:999px;transition:all .14s ease}
+  .chip:hover{color:#fff;border-color:rgba(255,255,255,.26)}
+  .chip.on{background:linear-gradient(135deg,rgba(34,211,238,.22),rgba(167,139,250,.22));color:#fff;border-color:rgba(34,211,238,.5)}
+
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:14px;margin:22px 0 0;padding-bottom:10px}
+  .card{position:relative;cursor:pointer;text-align:left;border-radius:var(--r);padding:22px 16px;min-height:112px;
+    display:grid;place-items:center;border:1px solid rgba(255,255,255,.09);overflow:hidden;
+    transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
+  .card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.24);box-shadow:0 16px 34px rgba(0,0,0,.4)}
+  .card.on{border-color:rgba(34,211,238,.75);box-shadow:0 0 0 2px rgba(34,211,238,.28),0 16px 34px rgba(0,0,0,.4)}
+  .card .txt{font-size:24px;line-height:1.25;text-align:center;word-break:break-word;max-width:100%}
+  .card .label{position:absolute;left:10px;bottom:8px;font-size:.66rem;font-weight:800;letter-spacing:.08em;
+    text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .card.on .label{color:#9fe9f5}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
+
+  /* info sections */
+  section.info{padding:64px 0}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .box{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);padding:24px}
+  .box h3{margin:0 0 8px;font-size:1.02rem;color:#fff}
+  .box p{margin:0;color:var(--muted);font-size:.92rem}
+  .box .n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;margin-bottom:14px;font-weight:800;
+    background:linear-gradient(140deg,rgba(34,211,238,.22),rgba(167,139,250,.22));color:#9fe9f5}
+  h2{font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.8px;margin:0 0 10px;color:#fff}
+  .sec-head{max-width:60ch;margin-bottom:28px}
+  .sec-head p{margin:0;color:var(--muted)}
+
+  footer{border-top:1px solid rgba(255,255,255,.08);padding:34px 0 44px;color:#6f8199;font-size:.86rem}
+  .foot{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+  footer a{color:#9fe9f5;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  /* toast */
+  .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);opacity:0;pointer-events:none;
+    background:#e8eefc;color:#0a0f18;font-weight:750;font-size:.88rem;padding:12px 20px;border-radius:999px;
+    box-shadow:0 16px 40px rgba(0,0,0,.5);transition:opacity .2s ease,transform .2s ease;z-index:99}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="mark">N</span> Newstyle</a>
+    <span class="spacer"></span>
+    <a class="ghost hide-sm" href="#styles">Styles</a>
+    <a class="ghost hide-sm" href="#how">Kaise use karein</a>
+    <a class="ghost" href="#download">Download</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <span class="eyebrow">✨ 40 styles · instant preview</span>
+    <h1>Apne naam ko <em>naya style</em> dein</h1>
+    <p class="sub">Naam likhein, style chunein — neon, 3D, gold, outline, gaming aur bahut kuch. Pasand aaye to PNG download karein ya share karne ke liye link copy karein.</p>
+
+    <div class="inputbar">
+      <label class="field">
+        <span>✏️</span>
+        <input id="nameInput" type="text" maxlength="28" placeholder="Apna naam likhein…" value="Newstyle" autocomplete="off" spellcheck="false">
+      </label>
+      <button class="btn btn-soft" id="randomBtn" type="button">🎲 Random</button>
+    </div>
+
+    <div class="stage-wrap">
+      <div class="stage" id="stage">
+        <span class="badge" id="stageBadge">Neon Cyan</span>
+        <div class="name" id="preview">Newstyle</div>
+        <span class="meta">live preview</span>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" id="downloadBtn" type="button">⬇️ PNG download</button>
+        <button class="btn btn-soft" id="copyBtn" type="button">🔗 Link copy karein</button>
+        <button class="btn btn-soft" id="waBtn" type="button">💬 WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" id="styles">
+    <div class="toolbar">
+      <div class="search">
+        <span>🔍</span>
+        <input id="searchInput" type="text" placeholder="Style dhundein (gold, neon, 3d…)" autocomplete="off">
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+
+  <section class="info" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Kaise use karein</h2>
+        <p>Teen step, koi signup nahi. Sab kuch aapke browser mein chalta hai — naam kahin save nahi hota.</p>
+      </div>
+      <div class="cols">
+        <div class="box"><div class="n">1</div><h3>Naam likhein</h3><p>Upar box mein apna ya dukaan ka naam likhein. Preview turant badal jaata hai.</p></div>
+        <div class="box"><div class="n">2</div><h3>Style chunein</h3><p>40 styles mein se koi bhi card dabayein — neon, 3D, gold, outline, gaming, minimal aur bahut kuch.</p></div>
+        <div class="box"><div class="n">3</div><h3>Download ya share</h3><p>PNG download karein (WhatsApp DP, thumbnail, banner ke liye) ya link copy karke kisi ko bhejein.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="download" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Shareable link</h2>
+        <p>"Link copy karein" dabane par ek link milta hai jisme aapka naam aur style dono hote hain — koi bhi use khol kar wahi design dekh sakta hai.</p>
+      </div>
+      <div class="box" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+        <code id="shareUrl" style="color:#9fe9f5;font-size:.86rem;word-break:break-all">—</code>
+        <button class="btn btn-soft" id="copyBtn2" type="button">Copy</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr">2026</span> Newstyle · naam style generator</div>
+    <div>PNG aur link dono aapke browser mein bante hain — koi data server par nahi jaata.</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Copied!</div>
+<canvas id="canvas" class="sr" width="1600" height="600"></canvas>
+
+<script>
+(function(){
+  "use strict";
+
+  var SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Arial, sans-serif";
+  var IMPACT = "Impact, 'Haettenschweiler', 'Arial Narrow Bold', 'Franklin Gothic Bold', sans-serif";
+  var SERIF = "Georgia, 'Times New Roman', serif";
+  var SCRIPT = "'Brush Script MT', 'Segoe Script', 'Bradley Hand', cursive";
+  var MONO = "'Courier New', Courier, monospace";
+  var COMIC = "'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive";
+
+  function S(id, name, cat, o){
+    o = o || {};
+    return {
+      id: id, name: name, cat: cat,
+      f: o.f || SANS,
+      w: o.w || 800,
+      i: !!o.i,
+      ls: o.ls || "0px",
+      fill: o.fill || ["#ffffff", "#c9d4e0"],
+      grad: o.grad !== false,
+      angle: o.angle || 180,
+      stroke: o.stroke || null,
+      glow: o.glow || null,
+      shadow: o.shadow || null,
+      hollow: !!o.hollow,
+      bg: o.bg || "#0a0f18"
+    };
+  }
+
+  var STYLES = [
+    /* Neon */
+    S("neon-cyan","Neon Cyan","Neon",{fill:["#c9fbff","#00e5ff"],glow:{c:"#00e5ff",blur:34},ls:"2px"}),
+    S("neon-pink","Neon Pink","Neon",{fill:["#ffd9f3","#ff2fb3"],glow:{c:"#ff2fb3",blur:34},ls:"2px"}),
+    S("neon-purple","Neon Purple","Neon",{fill:["#e9d9ff","#a855f7"],glow:{c:"#a855f7",blur:34},ls:"2px"}),
+    S("neon-green","Neon Green","Neon",{fill:["#d9ffe2","#22ff88"],glow:{c:"#22ff88",blur:32},ls:"2px"}),
+    S("neon-orange","Neon Orange","Neon",{fill:["#ffe9cc","#ff8a1f"],glow:{c:"#ff8a1f",blur:32},ls:"2px"}),
+    S("neon-red","Neon Red","Neon",{fill:["#ffd9d9","#ff2d2d"],glow:{c:"#ff2d2d",blur:32},ls:"2px"}),
+
+    /* 3D */
+    S("3d-shadow","3D Shadow","3D",{fill:["#ffffff","#c3cfdd"],shadow:{x:4,y:6,blur:0,c:"#000000"}}),
+    S("3d-block","3D Block","3D",{fill:["#ffd166","#f77f00"],shadow:{x:6,y:6,blur:0,c:"#7a3e00"}}),
+    S("3d-gold","3D Gold","3D",{fill:["#fff6bf","#d4a017"],stroke:{c:"#8a5a00",w:1},shadow:{x:3,y:6,blur:3,c:"#4a3000"}}),
+    S("3d-silver","3D Silver","3D",{fill:["#ffffff","#98a6b4"],stroke:{c:"#5b6b7a",w:1},shadow:{x:3,y:6,blur:3,c:"#1d2731"}}),
+    S("3d-chrome","3D Chrome","3D",{fill:["#f2faff","#6f7d8a"],stroke:{c:"#2b3a47",w:1},shadow:{x:2,y:5,blur:4,c:"#0b1218"}}),
+    S("3d-glass","3D Glass","3D",{fill:["#eaf9ff","#8ecbe6"],stroke:{c:"#ffffff",w:2},shadow:{x:0,y:8,blur:14,c:"#0b3a4a"}}),
+
+    /* Metallic */
+    S("gold-foil","Gold Foil","Metallic",{fill:["#fff8cc","#b8860b"],angle:110,glow:{c:"#ffd75e",blur:16}}),
+    S("silver-shine","Silver Shine","Metallic",{fill:["#ffffff","#8e9aa6"],angle:110,glow:{c:"#dfe9f3",blur:14}}),
+    S("bronze","Bronze","Metallic",{fill:["#ffd9a0","#8c5a2b"],angle:110,shadow:{x:2,y:4,blur:4,c:"#2a1608"}}),
+    S("diamond","Diamond","Metallic",{fill:["#ffffff","#bfe9ff"],angle:120,glow:{c:"#bfe9ff",blur:20}}),
+
+    /* Outline */
+    S("outline-white","Outline White","Outline",{hollow:true,stroke:{c:"#ffffff",w:2}}),
+    S("hollow-pink","Hollow Pink","Outline",{hollow:true,stroke:{c:"#ff4fa3",w:2},glow:{c:"#ff4fa3",blur:16}}),
+    S("double-outline","Double Outline","Outline",{hollow:true,stroke:{c:"#7df9ff",w:3},glow:{c:"#7df9ff",blur:12}}),
+    S("outline-gold","Outline Gold","Outline",{hollow:true,stroke:{c:"#e8b93b",w:2},glow:{c:"#e8b93b",blur:10}}),
+
+    /* Glow */
+    S("blue-glow","Blue Glow","Glow",{fill:["#dbeafe","#3b82f6"],glow:{c:"#3b82f6",blur:30}}),
+    S("fire-glow","Fire Glow","Glow",{fill:["#fff3b0","#ff5a1f"],glow:{c:"#ff5a1f",blur:32}}),
+    S("ice-glow","Ice Glow","Glow",{fill:["#eafcff","#7fd8ff"],glow:{c:"#7fd8ff",blur:28}}),
+
+    /* Retro */
+    S("retro-sunset","Retro Sunset","Retro",{fill:["#ffd86b","#ff2e63"],bg:"#1a0b2e",shadow:{x:0,y:6,blur:0,c:"#3a0b3f"}}),
+    S("vintage","Vintage","Retro",{f:SERIF,w:700,fill:["#e8d9b5","#b08b4f"],shadow:{x:2,y:3,blur:0,c:"#2b1d0e"}}),
+    S("classic-serif","Classic Serif","Retro",{f:SERIF,w:700,grad:false,fill:["#f2e9d8","#f2e9d8"],shadow:{x:2,y:4,blur:8,c:"#000000"}}),
+
+    /* Minimal */
+    S("minimal-clean","Minimal Clean","Minimal",{grad:false,bg:"#ffffff",fill:["#111827","#111827"],w:700,ls:"-0.5px"}),
+    S("elegant-serif","Elegant Serif","Minimal",{f:SERIF,w:600,grad:false,bg:"#f7f3ea",fill:["#2b2b2b","#2b2b2b"],ls:"1px"}),
+    S("signature","Signature","Minimal",{f:SCRIPT,w:400,bg:"#fffdf8",fill:["#1f3a5f","#1f3a5f"],ls:"1px"}),
+
+    /* Gaming */
+    S("gamer","Gamer","Gaming",{f:IMPACT,i:true,fill:["#d9ff8a","#4ade80"],glow:{c:"#7cff3f",blur:22},ls:"1px"}),
+    S("esports","Esports","Gaming",{f:IMPACT,i:true,fill:["#ff2d55","#7c3aed"],stroke:{c:"#ffffff",w:2},shadow:{x:3,y:5,blur:0,c:"#12002b"}}),
+    S("warrior","Warrior","Gaming",{f:IMPACT,fill:["#f7b733","#8b0000"],stroke:{c:"#000000",w:2}}),
+
+    /* Nature */
+    S("leaf","Leaf","Nature",{fill:["#e6ffb3","#15803d"],glow:{c:"#4ade80",blur:18}}),
+    S("ocean","Ocean","Nature",{fill:["#a5f3fc","#0369a1"],shadow:{x:0,y:8,blur:16,c:"#012b45"}}),
+
+    /* Fun */
+    S("bubble","Bubble","Fun",{fill:["#ffe4f3","#ff9ecd"],stroke:{c:"#ffffff",w:2},shadow:{x:0,y:6,blur:0,c:"#b03a7a"}}),
+    S("comic","Comic","Fun",{f:COMIC,fill:["#fff200","#ff8c00"],stroke:{c:"#000000",w:3},shadow:{x:5,y:5,blur:0,c:"#000000"}}),
+    S("rainbow","Rainbow","Fun",{fill:["#ff3b30","#a855f7"],angle:90,glow:{c:"#a855f7",blur:20}}),
+    S("mono-tech","Mono Tech","Fun",{f:MONO,w:700,grad:false,fill:["#a3e635","#a3e635"],glow:{c:"#a3e635",blur:14}}),
+    S("fire-text","Fire","Fun",{fill:["#ffe066","#ff3d00"],shadow:{x:0,y:8,blur:18,c:"#ff6a00"}}),
+    S("ice-text","Ice","Fun",{fill:["#ffffff","#8ee7ff"],stroke:{c:"#4fc3f7",w:1},glow:{c:"#8ee7ff",blur:20}})
+  ];
+
+  var state = { name: "Newstyle", styleId: "neon-cyan", cat: "All", q: "" };
+
+  var $ = function(sel, root){ return (root || document).querySelector(sel); };
+  var byId = function(id){ return STYLES.filter(function(s){ return s.id === id; })[0]; };
+
+  function styleFor(s){
+    var st = {
+      fontFamily: s.f,
+      fontWeight: String(s.w),
+      fontStyle: s.i ? "italic" : "normal",
+      letterSpacing: s.ls,
+      lineHeight: "1.15"
+    };
+    if (s.hollow){
+      st.color = "transparent";
+      st.webkitTextStroke = s.stroke.w + "px " + s.stroke.c;
+    } else if (s.grad){
+      st.backgroundImage = "linear-gradient(" + s.angle + "deg, " + s.fill[0] + ", " + s.fill[1] + ")";
+      st.webkitBackgroundClip = "text";
+      st.backgroundClip = "text";
+      st.color = "transparent";
+      if (s.stroke) st.webkitTextStroke = s.stroke.w + "px " + s.stroke.c;
+    } else {
+      st.color = s.fill[0];
+      if (s.stroke) st.webkitTextStroke = s.stroke.w + "px " + s.stroke.c;
+    }
+    var shadows = [];
+    if (s.glow){
+      shadows.push("0 0 " + (s.glow.blur * 0.22).toFixed(1) + "px " + s.glow.c);
+      shadows.push("0 0 " + (s.glow.blur * 0.55).toFixed(1) + "px " + s.glow.c);
+      shadows.push("0 0 " + s.glow.blur + "px " + s.glow.c);
+    }
+    if (s.shadow){
+      shadows.push((s.shadow.x||0) + "px " + (s.shadow.y||0) + "px " + (s.shadow.blur||0) + "px " + s.shadow.c);
+    }
+    if (shadows.length) st.textShadow = shadows.join(", ");
+    return st;
+  }
+
+  function applyStyle(el, s){
+    el.removeAttribute("style");
+    var st = styleFor(s);
+    for (var k in st){ if (Object.prototype.hasOwnProperty.call(st, k)) el.style[k] = st[k]; }
+  }
+
+  var grid = $("#grid");
+  var chipsEl = $("#chips");
+  var preview = $("#preview");
+  var stage = $("#stage");
+  var badge = $("#stageBadge");
+  var nameInput = $("#nameInput");
+  var shareUrl = $("#shareUrl");
+
+  var CATS = ["All"].concat(STYLES.map(function(s){ return s.cat; }).filter(function(c, i, a){ return a.indexOf(c) === i; }));
+
+  function buildChips(){
+    chipsEl.innerHTML = "";
+    CATS.forEach(function(c){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip" + (state.cat === c ? " on" : "");
+      b.textContent = c;
+      b.addEventListener("click", function(){
+        state.cat = c;
+        buildChips();
+        buildGrid();
+      });
+      chipsEl.appendChild(b);
+    });
+  }
+
+  function visibleStyles(){
+    var q = state.q.trim().toLowerCase();
+    return STYLES.filter(function(s){
+      var okCat = state.cat === "All" || s.cat === state.cat;
+      var okQ = !q || (s.name + " " + s.cat + " " + s.id).toLowerCase().indexOf(q) !== -1;
+      return okCat && okQ;
+    });
+  }
+
+  function buildGrid(){
+    var list = visibleStyles();
+    grid.innerHTML = "";
+    if (!list.length){
+      var e = document.createElement("div");
+      e.className = "empty";
+      e.textContent = "Koi style nahi mila — doosra shabd try karein.";
+      grid.appendChild(e);
+      return;
+    }
+    list.forEach(function(s){
+      var card = document.createElement("button");
+      card.type = "button";
+      card.className = "card" + (s.id === state.styleId ? " on" : "");
+      card.setAttribute("aria-label", s.name + " style");
+      card.style.background = s.bg;
+
+      var t = document.createElement("span");
+      t.className = "txt";
+      t.textContent = state.name || "Newstyle";
+      applyStyle(t, s);
+
+      var l = document.createElement("span");
+      l.className = "label";
+      l.textContent = s.name;
+
+      card.appendChild(t);
+      card.appendChild(l);
+      card.addEventListener("click", function(){ selectStyle(s.id); });
+      grid.appendChild(card);
+    });
+  }
+
+  function refreshTexts(){
+    var nodes = grid.querySelectorAll(".card .txt");
+    for (var i = 0; i < nodes.length; i++){ nodes[i].textContent = state.name || "Newstyle"; }
+  }
+
+  function selectStyle(id){
+    state.styleId = id;
+    var s = byId(id) || STYLES[0];
+    preview.textContent = state.name || "Newstyle";
+    applyStyle(preview, s);
+    stage.style.background = "radial-gradient(700px 300px at 50% 0%, rgba(255,255,255,.05), transparent 70%), " + s.bg;
+    badge.textContent = s.name;
+    var cards = grid.querySelectorAll(".card");
+    for (var i = 0; i < cards.length; i++){
+      cards[i].classList.toggle("on", cards[i].getAttribute("aria-label") === s.name + " style");
+    }
+    updateUrl();
+  }
+
+  function updateUrl(){
+    var url = location.origin + location.pathname + "?name=" + encodeURIComponent(state.name) + "&style=" + encodeURIComponent(state.styleId);
+    shareUrl.textContent = url;
+    try { history.replaceState(null, "", url); } catch (e) { /* ignore */ }
+    return url;
+  }
+
+  /* ---------- PNG export ---------- */
+  function drawToCanvas(s, text){
+    var canvas = $("#canvas");
+    var ctx = canvas.getContext("2d");
+    var W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    ctx.fillStyle = s.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    var grad = ctx.createRadialGradient(W/2, -H*0.2, 40, W/2, -H*0.2, W*0.7);
+    grad.addColorStop(0, "rgba(255,255,255,0.07)");
+    grad.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    var label = text || "Newstyle";
+    var size = 260;
+    var font = function(px){
+      return (s.i ? "italic " : "") + s.w + " " + px + "px " + s.f;
+    };
+    ctx.font = font(size);
+    var maxW = W * 0.86;
+    var m = ctx.measureText(label).width;
+    if (m > maxW){ size = Math.max(40, Math.floor(size * maxW / m)); ctx.font = font(size); }
+
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    var x = W / 2, y = H / 2;
+
+    if (s.shadow){
+      ctx.shadowColor = s.shadow.c;
+      ctx.shadowBlur = s.shadow.blur || 0;
+      ctx.shadowOffsetX = s.shadow.x || 0;
+      ctx.shadowOffsetY = s.shadow.y || 0;
+    } else if (s.glow){
+      ctx.shadowColor = s.glow.c;
+      ctx.shadowBlur = s.glow.blur;
+    }
+
+    if (s.stroke){
+      ctx.lineWidth = s.stroke.w * (size / 90);
+      ctx.strokeStyle = s.stroke.c;
+      ctx.lineJoin = "round";
+      ctx.strokeText(label, x, y);
+    }
+
+    if (!s.hollow){
+      ctx.shadowBlur = s.glow ? s.glow.blur : (s.shadow ? (s.shadow.blur || 0) : 0);
+      var g = ctx.createLinearGradient(0, y - size * 0.6, 0, y + size * 0.6);
+      g.addColorStop(0, s.fill[0]);
+      g.addColorStop(1, s.fill[1]);
+      ctx.fillStyle = g;
+      ctx.fillText(label, x, y);
+    }
+    ctx.shadowBlur = 0; ctx.shadowOffsetX = 0; ctx.shadowOffsetY = 0;
+
+    ctx.font = "600 26px " + SANS;
+    ctx.fillStyle = "rgba(255,255,255,0.42)";
+    ctx.textAlign = "right";
+    ctx.fillText("newstyle", W - 40, H - 34);
+    return canvas;
+  }
+
+  function download(){
+    var s = byId(state.styleId) || STYLES[0];
+    var canvas = drawToCanvas(s, state.name || "Newstyle");
+    var safe = (state.name || "newstyle").replace(/[^a-z0-9\-_]+/gi, "-").toLowerCase();
+    var a = document.createElement("a");
+    a.download = safe + "-" + s.id + ".png";
+    try {
+      a.href = canvas.toDataURL("image/png");
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      toast("PNG download ho gaya");
+    } catch (e) {
+      toast("Download nahi hua — dobara try karein");
+    }
+  }
+
+  /* ---------- clipboard ---------- */
+  function copyLink(){
+    var url = updateUrl();
+    var done = function(){ toast("Link copy ho gaya"); };
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(done, fallback);
+    } else { fallback(); }
+    function fallback(){
+      var ta = document.createElement("textarea");
+      ta.value = url;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { toast("Copy nahi hua — link select karke copy karein"); }
+      document.body.removeChild(ta);
+    }
+  }
+
+  var toastEl = $("#toast");
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("show"); }, 1900);
+  }
+
+  /* ---------- events ---------- */
+  nameInput.addEventListener("input", function(){
+    state.name = nameInput.value.slice(0, 28);
+    preview.textContent = state.name || "Newstyle";
+    refreshTexts();
+    updateUrl();
+  });
+
+  $("#searchInput").addEventListener("input", function(e){
+    state.q = e.target.value;
+    buildGrid();
+  });
+
+  $("#randomBtn").addEventListener("click", function(){
+    var list = visibleStyles();
+    var pick = list[Math.floor(Math.random() * list.length)] || STYLES[0];
+    if (state.cat !== "All" || state.q){
+      state.cat = "All"; state.q = ""; $("#searchInput").value = ""; buildChips(); buildGrid();
+    }
+    selectStyle(pick.id);
+    toast("Style: " + pick.name);
+  });
+
+  $("#downloadBtn").addEventListener("click", download);
+  $("#copyBtn").addEventListener("click", copyLink);
+  $("#copyBtn2").addEventListener("click", copyLink);
+  $("#waBtn").addEventListener("click", function(){
+    var url = updateUrl();
+    var msg = "Dekho mera naam Newstyle mein: " + url;
+    window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+
+  /* ---------- boot ---------- */
+  (function boot(){
+    var params = new URLSearchParams(location.search);
+    var n = params.get("name");
+    var sid = params.get("style");
+    if (n) { state.name = n.slice(0, 28); }
+    nameInput.value = state.name;
+    if (sid && byId(sid)) { state.styleId = sid; }
+    buildChips();
+    buildGrid();
+    selectStyle(state.styleId);
+    $("#yr").textContent = new Date().getFullYear();
+  })();
+})();
+</script>
+</body>
+</html>
