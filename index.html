@@ -774,12 +774,22 @@
     var s = current();
     var canvas = drawToCanvas(s, cfg.name || "Newstyle");
     var safe = (cfg.name||"newstyle").replace(/[^a-z0-9\-_]+/gi,"-").toLowerCase();
-    var a = document.createElement("a");
-    a.download = safe + "-" + s.id + ".png";
+    var filename = safe + "-" + s.id + ".png";
     try {
-      a.href = canvas.toDataURL("image/png");
-      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      var dataUrl = canvas.toDataURL("image/png");
       stats.downloads = (stats.downloads||0) + 1; saveStats();
+
+      /* inside the Android app the page talks to the native WebView bridge */
+      if (window.AndroidSaver && typeof window.AndroidSaver.saveDataUrl === "function"){
+        window.AndroidSaver.saveDataUrl(filename, dataUrl);
+        toast("PNG save ho gaya — Pictures/Newstyle");
+        return;
+      }
+
+      var a = document.createElement("a");
+      a.download = filename;
+      a.href = dataUrl;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
       toast("PNG download ho gaya");
     } catch(e){ toast("Download nahi hua — dobara try karein"); }
   }
